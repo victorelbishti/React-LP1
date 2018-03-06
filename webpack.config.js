@@ -3,9 +3,9 @@ var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
-    context: path.join(__dirname, "src"),
+    context: path.join(__dirname, "js"),
     devtool: debug ? "inline-sourcemap" : false,
-    entry: "./js/script.js",
+    entry: "./js/scripts.js",
     module: {
         loaders: [
             {
@@ -20,8 +20,8 @@ module.exports = {
         ]
     },
     output: {
-        path: __dirname + "/js/",
-        filename: "bundle.min.js"
+        path: __dirname + "/js",
+        filename: "scripts.min.js"
     },
     plugins: debug ? [] : [
         new webpack.optimize.DedupePlugin(),
